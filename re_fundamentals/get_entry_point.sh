@@ -9,7 +9,7 @@ fi
 
 getMagic=$(readelf -h $1 | grep -E 'Magic' | awk '{split($0, a, ":"); print a[2]}')
 getClass=$(readelf -h $1 | grep -E 'Class' | awk '{split($0, a, ":"); print a[2]}')
-getByte=$(readelf -h $1 | grep -E 'Data' | awk '{split($0, a, ":"); print a[2]}')
+getByte=$(readelf -h $1 | grep -E 'Data' | awk '{split($0, a, ","); print a[2]}')
 getEntry=$(readelf -h $1 | grep -E 'address' | awk '{split($0, a, ":"); print a[2]}')
 
 
