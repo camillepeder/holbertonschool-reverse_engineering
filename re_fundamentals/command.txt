@@ -1,1 +1,1 @@
-readelf -x .mydata ./task1
+readelf -S ./task1
